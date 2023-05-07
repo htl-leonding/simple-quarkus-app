@@ -1,0 +1,36 @@
+project:
+  name: simple-quarkus-app
+  description: simple-quarkus-app
+  longDescription: simple-quarkus-app
+  links:
+    homepage: https://github.com/htl-leonding/simple-quarkus-app
+  authors:
+    - Thomas Stütz
+  license: Apache-2.0
+  java:
+    groupId: com.acme
+    version: 8
+  inceptionYear: 2021
+  stereotype: cli
+
+release:
+  github:
+    overwrite: true
+    sign: true
+    discussionCategoryName: 'Announcements'
+    changelog:
+      formatted: 'ALWAYS'
+      format: '- {{commitShortHash}} {{commitTitle}}'
+      preset: 'conventional-commits'
+      contributors:
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
+
+signing:
+  active: always
+  armored: true
+
+distributions:
+  app:
+    artifacts:
+      - path: target/distributions/{{distributionName}}/{{distributionName}}-{{projectVersion}}.zip
+      - path: target/distributions/{{distributionName}}/{{distributionName}}-{{projectVersion}}.tar.gz
