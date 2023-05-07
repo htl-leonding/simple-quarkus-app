@@ -21,3 +21,10 @@ jobs:
           cache: maven
       - name: Build
         run: ./mvnw verify -B
+
+        # Create a release
+
+      - name: Run JReleaser
+        uses: jreleaser/release-action@v2
+        env:
+          JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
