@@ -8,10 +8,10 @@ project:
     - Thomas Stütz
   license: Apache-2.0
   java:
-    groupId: com.acme
-    version: 8
-  inceptionYear: 2021
-  stereotype: cli
+    groupId: at.htlleonding
+    version: "17"
+  inceptionYear: "2023"
+  stereotype: CLI
 
 release:
   github:
