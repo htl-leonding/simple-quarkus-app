@@ -25,9 +25,9 @@ release:
       contributors:
         format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
 
-signing:
-  active: always
-  armored: true
+#signing:
+#  active: always
+#  armored: true
 
 distributions:
   app:
